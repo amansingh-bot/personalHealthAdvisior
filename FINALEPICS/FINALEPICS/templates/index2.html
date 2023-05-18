@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disease Prediction</title>
+  </head>
+  <body>
+    <h1>Disease Prediction</h1>
+    <form method="POST" action="/predict">
+      <!-- Form fields for symptoms -->
+      <label for="symptom1">Symptom 1:</label>
+      <input type="text" name="symptom1"><br>
+
+      <label for="symptom2">Symptom 2:</label>
+      <input type="text" name="symptom2"><br>
+
+      <label for="symptom3">Symptom 3:</label>
+      <input type="text" name="symptom3"><br>
+
+      <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <p>The predicted disease is: {{ prediction }}</p>
+    {% endif %}
+  </body>
+</html>
